@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "jatin_backend": {
+      "main": "src/jatin_backend/main.mo",
+      "type": "motoko"
+    },
+    "jatin_frontend": {
+      "dependencies": [
+        "jatin_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/jatin_frontend/src/index.html"
+      },
+      "source": [
+        "src/jatin_frontend/assets",
+        "dist/jatin_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
